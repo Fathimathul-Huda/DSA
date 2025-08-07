@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const arr = [
+        [3, 5, 1],
+        [9, 6, 4],
+        [2, 7, 8]
+    ];
+    const transpose = [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]
+    ];
+       function trans(arr) {
+            for(i=0;i<arr.length;i++){
+                for(j=0;j<arr.length;j++){
+                    transpose[i][j] = arr[j][i];   
+                }
+            }
+            
+        }
+        trans(arr)
+        console.log(transpose); 
+    </script>
+</body>
+</html>

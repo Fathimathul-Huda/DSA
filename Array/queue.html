@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let queue=[];
+        function enqueue(element){
+            queue.push(element)
+        }
+
+        function dequeue(element){
+            if(queue.length===0){
+                console.log("queue is underflow")
+                return 0;
+            }
+            return queue.shift();
+        }
+        function peek(element){
+            if(queue.length===0){
+                console.log("queue is empty")
+                return 0;
+            }
+            return queue[0];
+        }
+        function empty(){
+            return queue.length===0;
+        }
+        enqueue(20);
+        enqueue(30);
+        enqueue(40);
+        console.log(queue);
+        console.log(dequeue());
+        console.log(queue);
+    </script>
+</body>
+</html>

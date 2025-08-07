@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let stack=[]
+        function push(element){
+            stack.push(element);
+        }
+        function pop(){
+            if(stack.length==0){
+                console.log("underflow")
+                return null;
+            }
+            return stack.pop();
+        }
+        function peek(){
+            if(stack.length==0){
+                console.log("stack empty")
+                return null;
+            }
+            return stack[stack.length-1];
+        }
+        function empty(){
+            return stack.length===0;
+        }
+        
+        console.log(stack)
+        push(20)
+        push(30)
+        push(40)
+        push(50)
+        console.log(peek());
+        console.log(pop());
+        console.log(pop());
+        console.log(empty());
+        
+    </script>
+</body>
+</html>
